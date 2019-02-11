@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Learn2Sign</string>
+    <string name="choose_a_word">Choose A Word</string>
+    <string name="server_ip_address">Choose Server Ip Address</string>
+
+    <string-array name="server_ips">
+        <item>10.211.17.171</item>
+    </string-array>
+    <string-array name="spinner_words">
+        <item>Alaska</item>
+        <item>Arizona</item>
+        <item>California</item>
+        <item>Colorado</item>
+        <item>Florida</item>
+        <item>Georgia</item>
+        <item>Hawaii</item>
+        <item>Illinois</item>
+        <item>Indiana</item>
+        <item>Kansas</item>
+        <item>Louisiana</item>
+        <item>Massachusetts</item>
+        <item>Michigan</item>
+        <item>Minnesota</item>
+        <item>Nevada</item>
+        <item>NewJersey</item>
+        <item>NewMexico</item>
+        <item>NewYork</item>
+        <item>Ohio</item>
+        <item>Pennsylvania</item>
+        <item>SouthCarolina</item>
+        <item>Texas</item>
+        <item>Utah</item>
+        <item>Washington</item>
+        <item>Wisconsin</item>
+    </string-array>
+    <string name="title_activity_login">LoginActivity</string>
+
+
+    <string name="login">Login</string>
+    <string name="logout">Logout</string>
+    <string name="gotoupload">GotoUpload</string>
+</resources>

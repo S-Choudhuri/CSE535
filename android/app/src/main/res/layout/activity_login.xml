@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Learn2Sign App"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:paddingTop="40dp"
+        android:paddingBottom="40dp"
+        android:singleLine="true"
+        android:textSize="30sp"/>
+
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="ASU EMAIL"
+            android:layout_margin="20dp"
+            android:maxLength="30"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textSize="20sp"
+            />
+
+
+    <EditText
+        android:id="@+id/et_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="ASU ID"
+        android:layout_margin="20dp"
+        android:inputType="number"
+        android:maxLength="30"
+        android:maxLines="1"
+        android:textSize="20sp"/>
+
+    <Button
+        android:id="@+id/bt_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        android:text="Login"/>
+
+</LinearLayout>
