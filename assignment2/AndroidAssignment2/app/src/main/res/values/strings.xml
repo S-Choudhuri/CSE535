@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">AndroidAssignment2</string>
+    <string name="action_settings">Settings</string>
+    <string name="asl_about_or_father_predictor">ASL About or Father Predictor</string>
+    <string name="run_svm">Run SVM</string>
+    <string name="run_dtree">Run DTree</string>
+    <string name="read_csv_file">Read CSV File</string>
+    <string name="textview">TextView</string>
+    <string name="error_classification">Error in Classification.</string>
+    <string name="classify_about">Classified as About.</string>
+    <string name="classified_father">Classified as Father.</string>
+    <string name="output">Output:</string>
+</resources>
