@@ -1,0 +1,53 @@
+TIME_DIM = 4
+n_batch = 4
+n_neurons = 5
+import numpy as np
+from keras.datasets import mnist
+from keras.layers import LSTM, Dense, RepeatVector, TimeDistributed
+from keras.models import Sequential
+import pandas as pd
+from keras.utils import to_categorical
+'''
+(x_train, y_train), (x_test, y_test) = mnist.load_data()
+x_train = x_train[:,:,:26]
+x_test = x_test[:,:,:26]
+print(x_train.shape)
+print(x_test.shape)
+'''
+
+d = pd.read_csv("Sandipan_compressed1.csv")
+
+d = d.values
+print(d.shape)
+lab = d[:,18]
+d = d[:,0:18]
+
+
+x = np.zeros((d.shape[0]-TIME_DIM+1,TIME_DIM,d.shape[1]), dtype='float')
+y = np.zeros((d.shape[0]-TIME_DIM+1,1), dtype='float')
+SIZE = d.shape[0]-TIME_DIM+1
+
+for i in range(SIZE):
+    for j in range(TIME_DIM):
+        x[i,j,:] = d[i+j,:]
+    y[i] = lab[i+j]
+
+y = to_categorical(y)
+    
+model = Sequential()
+#model.add(LSTM(n_neurons, batch_input_shape=(n_batch, x.shape[1], x.shape[2]), stateful=True))
+#model.add(RepeatVector(x_train.shape[1]))
+#model.add(Dense(2,activation='softmax'))
+model.add(LSTM(4, input_shape=(4, 18)))
+model.add(Dense(2, activation='softmax'))
+model.summary()
+model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
+
+model.fit(x,y,epochs=150,batch_size=100, validation_split=0.2)           # Change x to x_test, y to y_test
+                                                  # Change epochs as required
+y1 = model.predict(x)
+
+model.evaluate(x,y1)
+
+
+
